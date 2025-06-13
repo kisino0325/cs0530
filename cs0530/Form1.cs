@@ -4,6 +4,7 @@ namespace cs0530
     {
         int vx = -10;
         int vy = -10;
+        int counter = 0;
         public Form1()
         {
             InitializeComponent();
@@ -11,13 +12,13 @@ namespace cs0530
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            counter++;
+            label3.Text = $"{counter}";
             var mpos = MousePosition;
             var fpos = PointToClient(mpos);
 
             Text = $"{mpos.X},{mpos.Y} /{fpos.X},{fpos.Y}";
 
-            label3.Left += vx;
-            label3.Top += vy;
 
             label2.Left = fpos.X - label2.Width / 2;
             label2.Top = fpos.Y - label2.Height / 2;
@@ -45,7 +46,11 @@ namespace cs0530
                 MessageBox.Show("‚ª‚ñ‚Î`");
                 timer1.Enabled = false;
             }
-            
+            if (fpos.X > label1.Left
+                && fpos.X < label1.Top
+                && fpos.Y > label1.Right
+                && fpos.Y < label1.Bottom) ;
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,6 +66,13 @@ namespace cs0530
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            counter = 0;
+            button1.Visible = false;
         }
     }
 }
