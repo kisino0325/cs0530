@@ -2,14 +2,15 @@ namespace cs0530
 {
     public partial class Form1 : Form
     {
-        int []vx = new int[3];
-        int []vy = new int[3];
-      
+        int[] vx = new int[3];
+        int[] vy = new int[3];
+
         int counter = 0;
         static Random random = new Random();
         public Form1()
         {
             InitializeComponent();
+
             vx[0] = random.Next(-10, 11);
             vy[0] = random.Next(-10, 11);
             vx[1] = random.Next(-69, 83);
@@ -149,6 +150,14 @@ namespace cs0530
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for(int i=0; i<10;i++)
+            {
+                MessageBox.Show($"{i}");
+            }
         }
     }
 }
