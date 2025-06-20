@@ -47,7 +47,7 @@
             label1.Size = new Size(38, 15);
             label1.TabIndex = 0;
             label1.Text = "label1";
-            label1.Click += label1_Click;
+           
             // 
             // timer1
             // 
@@ -92,7 +92,7 @@
             label4.Size = new Size(38, 15);
             label4.TabIndex = 4;
             label4.Text = "label4";
-            label4.Click += label4_Click;
+            
             // 
             // label5
             // 
@@ -102,7 +102,7 @@
             label5.Size = new Size(38, 15);
             label5.TabIndex = 5;
             label5.Text = "label5";
-            label5.Click += label5_Click;
+            
             // 
             // button2
             // 
